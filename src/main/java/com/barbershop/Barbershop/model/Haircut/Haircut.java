@@ -1,5 +1,13 @@
-package com.barbershop.Barbershop;
+package com.barbershop.Barbershop.model;
 
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Getter
+@Setter
+
+@Document(collection = "Haircut")
 public class Haircut {
     private String name;
     private Float price;
