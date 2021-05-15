@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*", allowedHeaders = "*")
+
 @RestController
 public class HaircutController {
 
@@ -26,7 +28,7 @@ public class HaircutController {
     }
 
     @DeleteMapping("/haircut/{id}")
-    public void delete(@PathVariable int id) {
+    public void delete(@PathVariable String id) {
         repository.deleteById(id);
     }
 }

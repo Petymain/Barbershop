@@ -9,16 +9,16 @@ import java.util.Date;
 public class Appointment {
 
     @Id
-    private  int id;
+    private  String id;
     private String email;
     private Date time;
     private String phone;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

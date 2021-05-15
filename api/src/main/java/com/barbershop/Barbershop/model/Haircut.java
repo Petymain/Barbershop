@@ -5,6 +5,7 @@ import lombok.Setter;
 import lombok.ToString;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.MongoId;
 
 import java.util.List;
 
@@ -15,20 +16,20 @@ import java.util.List;
 @Document(collection = "Haircut")
 public class Haircut {
     @Id
-    private int id;
+    private String id;
     private String name;
     private Float price;
-    private List<String>  pictures;
+    private String  pictureURL;
     private String note;
 
     public Haircut() {
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -48,12 +49,12 @@ public class Haircut {
         this.price = price;
     }
 
-    public List<String> getPictures() {
-        return pictures;
+    public String getPicture() {
+        return pictureURL;
     }
 
-    public void setPictures(List<String> pictures) {
-        this.pictures = pictures;
+    public void setPicture(String pictureURL) {
+        this.pictureURL = pictureURL;
     }
 
     public String getNote() {
@@ -64,7 +65,4 @@ public class Haircut {
         this.note = note;
     }
 
-    public void addPicture(String picture) {
-        this.pictures.add(picture);
-    }
 }
