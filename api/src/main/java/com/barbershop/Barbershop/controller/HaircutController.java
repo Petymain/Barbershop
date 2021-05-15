@@ -1,12 +1,9 @@
 package com.barbershop.Barbershop.controller;
 
-import com.barbershop.Barbershop.model.Haircut.Haircut;
+import com.barbershop.Barbershop.model.Haircut;
 import com.barbershop.Barbershop.repository.HaircutRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,5 +23,10 @@ public class HaircutController {
     @GetMapping("/haircut")
     public List<Haircut> getHaircuts() {
         return repository.findAll();
+    }
+
+    @DeleteMapping("/haircut/{id}")
+    public void delete(@PathVariable int id) {
+        repository.deleteById(id);
     }
 }

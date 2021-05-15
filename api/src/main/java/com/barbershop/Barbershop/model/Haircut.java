@@ -1,4 +1,4 @@
-package com.barbershop.Barbershop.model.Haircut;
+package com.barbershop.Barbershop.model;
 
 import lombok.Getter;
 import lombok.Setter;
