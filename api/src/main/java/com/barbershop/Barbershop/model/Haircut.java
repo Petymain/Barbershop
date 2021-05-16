@@ -21,6 +21,7 @@ public class Haircut {
     private Float price;
     private String  pictureURL;
     private String note;
+    private String gender;
 
     public Haircut() {
     }
@@ -47,6 +48,14 @@ public class Haircut {
 
     public void setPrice(Float price) {
         this.price = price;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public String getPicture() {

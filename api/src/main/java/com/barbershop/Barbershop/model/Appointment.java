@@ -3,6 +3,7 @@ package com.barbershop.Barbershop.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Document(collection = "Appointment")
@@ -10,9 +11,11 @@ public class Appointment {
 
     @Id
     private  String id;
+    private String clientName;
     private String email;
-    private Date time;
-    private String phone;
+    private LocalDateTime dateTime;
+    private String tel;
+    private String message;
 
     public String getId() {
         return id;
@@ -20,6 +23,14 @@ public class Appointment {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getClientName() {
+        return clientName;
+    }
+
+    public void setClientName(String clientName) {
+        this.clientName = clientName;
     }
 
     public String getEmail() {
@@ -30,19 +41,27 @@ public class Appointment {
         this.email = email;
     }
 
-    public Date getTime() {
-        return time;
+    public LocalDateTime getDateTime() {
+        return dateTime;
     }
 
-    public void setTime(Date time) {
-        this.time = time;
+    public void setDateTime(LocalDateTime dateTime) {
+        this.dateTime = dateTime;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getTel() {
+        return tel;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setTel(String tel) {
+        this.tel = tel;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 }

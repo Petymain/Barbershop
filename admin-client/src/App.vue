@@ -4,18 +4,10 @@
       <nav class="navbar navbar-light">
         <div class="container-fluid">
           <span class="navbar-brand mb-0 h1">Barbershop admin</span>
-          <ul class="nav nav-pills">
-            <li class="nav-item">
-              <router-link class="nav-link" aria-current="page" to="/"
-                >Haircuts</router-link
-              >
-            </li>
-            <li class="nav-item">
-              <router-link class="nav-link" to="/appointments"
-                >Appointments</router-link
-              >
-            </li>
-          </ul>
+          <div id="nav">
+            <router-link to="/">Haircuts</router-link> |
+            <router-link to="/appointments">Appointments</router-link>
+          </div>
         </div>
       </nav>
     </div>
@@ -41,6 +33,6 @@
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #0d6efd;
 }
 </style>

@@ -11,8 +11,8 @@ const routes = [
     component: Haircut,
   },
   {
-    path: "/appointment",
-    name: "Appointment",
+    path: "/appointments",
+    name: "Appointments",
     component: Appointment,
   },
 ];
