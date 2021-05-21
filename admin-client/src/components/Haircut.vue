@@ -107,7 +107,7 @@
               <p class="card-text module ine-clamp">
                 {{ h.note }}
               </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+             
             </div>
           </div>
         </div>
